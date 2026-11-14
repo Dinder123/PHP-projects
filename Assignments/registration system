@@ -1,0 +1,31 @@
+<?php
+// 5. Alicia's registration system
+$registrationFee = 3000;
+$numberOfProgrammes = 8;
+
+// Simulate a chosen programme (1 to 8) and demand level
+$chosenProgramme = 3;   // example: programme number chosen (1-8)
+$demandLevel = "high";  // can be "low" or "high"
+
+if ($chosenProgramme < 1 || $chosenProgramme > $numberOfProgrammes) {
+    echo "Invalid programme selection. Choose between 1 and $numberOfProgrammes." . PHP_EOL;
+} else {
+    if ($demandLevel === "low") {
+        $programmeFee = 5000;
+    } elseif ($demandLevel === "high") {
+        $programmeFee = 8000;
+    } else {
+        die("Invalid demand level specified." . PHP_EOL);
+    }
+
+    $totalFee = $registrationFee + $programmeFee;
+
+    echo "Alicia's Registration Summary" . PHP_EOL;
+    echo "------------------------------" . PHP_EOL;
+    echo "Registration Fee: KSh " . number_format($registrationFee, 2) . PHP_EOL;
+    echo "Programme Chosen: $chosenProgramme" . PHP_EOL;
+    echo "Demand Level: " . ucfirst($demandLevel) . PHP_EOL;
+    echo "Programme Fee: KSh " . number_format($programmeFee, 2) . PHP_EOL;
+    echo "------------------------------" . PHP_EOL;
+    echo "Total Amount Payable: KSh " . number_format($totalFee, 2) . PHP_EOL;
+}

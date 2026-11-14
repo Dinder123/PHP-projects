@@ -1,0 +1,6 @@
+<?php
+// 3. Convert KSh to USD
+$rate = 145; // KSh per 1 USD
+$kshAmount = 17500;
+$usdAmount = $kshAmount / $rate;
+echo "KSh " . $kshAmount . " is equivalent to $" . number_format($usdAmount, 2) . PHP_EOL;

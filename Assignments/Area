@@ -1,0 +1,6 @@
+<?php
+// 2. Area of a rectangle
+$length = 12;
+$width = 11;
+$area = $length * $width;
+echo "The area of the rectangle is $area" . PHP_EOL;

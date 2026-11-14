@@ -1,0 +1,32 @@
+<?php
+// 4. Process Abdi's salary
+$basicSalary = 37000;
+$houseAllowance = 12000;
+$medicalAllowance = 10000;
+$extraneousAllowance = 8900;
+
+$grossSalary = $basicSalary + $houseAllowance + $medicalAllowance + $extraneousAllowance;
+
+$nssf = 0.02 * $grossSalary;
+$housingLevy = 0.03 * $grossSalary;
+$shif = 0.0275 * $grossSalary;
+$paye = 0.10 * $grossSalary;
+
+$totalDeductions = $nssf + $housingLevy + $shif + $paye;
+$netSalary = $grossSalary - $totalDeductions;
+
+echo "Salary Processing for Abdi" . PHP_EOL;
+echo "----------------------------" . PHP_EOL;
+echo "Basic Salary: KSh " . number_format($basicSalary, 2) . PHP_EOL;
+echo "House Allowance: KSh " . number_format($houseAllowance, 2) . PHP_EOL;
+echo "Medical Allowance: KSh " . number_format($medicalAllowance, 2) . PHP_EOL;
+echo "Extraneous Allowance: KSh " . number_format($extraneousAllowance, 2) . PHP_EOL;
+echo "Gross Salary: KSh " . number_format($grossSalary, 2) . PHP_EOL;
+echo "----------------------------" . PHP_EOL;
+echo "NSSF (2%): KSh " . number_format($nssf, 2) . PHP_EOL;
+echo "Housing Levy (3%): KSh " . number_format($housingLevy, 2) . PHP_EOL;
+echo "SHIF (2.75%): KSh " . number_format($shif, 2) . PHP_EOL;
+echo "PAYE (10%): KSh " . number_format($paye, 2) . PHP_EOL;
+echo "Total Deductions: KSh " . number_format($totalDeductions, 2) . PHP_EOL;
+echo "----------------------------" . PHP_EOL;
+echo "Net Salary: KSh " . number_format($netSalary, 2) . PHP_EOL;
